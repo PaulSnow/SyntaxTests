@@ -1,0 +1,1263 @@
+<decision_tables>
+	<decision_table>
+		<table_name>Syntax_Examples</table_name>
+		<xls_file>SyntaxExampleDTs.xls</xls_file>
+		<attribute_fields>
+			<type>FIRST</type>
+			<comments></comments>
+			<policy_reference></policy_reference>
+		</attribute_fields>
+		<contexts>
+			<context_details>
+				<context_number>1</context_number>
+				<context_description>for all clients</context_description>
+			</context_details>
+			<context_details>
+				<context_number>2</context_number>
+				<context_description>for all clients whose age == 18 and street == &apos;that&apos;</context_description>
+			</context_details>
+			<context_details>
+				<context_number>3</context_number>
+				<context_description>for each case and its address in the job.cases</context_description>
+			</context_details>
+			<context_details>
+				<context_number>4</context_number>
+				<context_description>for each case and its address in the job.cases allowing cases to be removed</context_description>
+			</context_details>
+			<context_details>
+				<context_number>5</context_number>
+				<context_description>for each case and its address in the job.cases where &apos;Austin&apos;==city</context_description>
+			</context_details>
+			<context_details>
+				<context_number>6</context_number>
+				<context_description>For each case and its address in the job.cases where street == &apos;Opal&apos; allowing job.Cases to be removed</context_description>
+			</context_details>
+			<context_details>
+				<context_number>7</context_number>
+				<context_description>For each case and its address in the job.cases where street == &apos;Opal&apos; allowing job.Cases to be removed</context_description>
+			</context_details>
+			<context_details>
+				<context_number>8</context_number>
+				<context_description>local entity FirstClient</context_description>
+			</context_details>
+			<context_details>
+				<context_number>9</context_number>
+				<context_description>local entity FirstClient2 = the client</context_description>
+			</context_details>
+			<context_details>
+				<context_number>10</context_number>
+				<context_description>local long Anumber</context_description>
+			</context_details>
+			<context_details>
+				<context_number>11</context_number>
+				<context_description>local long Anumber2 = 1234</context_description>
+			</context_details>
+			<context_details>
+				<context_number>12</context_number>
+				<context_description>local double DoubleNumber</context_description>
+			</context_details>
+			<context_details>
+				<context_number>13</context_number>
+				<context_description>local double DoubleNumber2 = 1.234</context_description>
+			</context_details>
+			<context_details>
+				<context_number>14</context_number>
+				<context_description>local boolean Test</context_description>
+			</context_details>
+			<context_details>
+				<context_number>15</context_number>
+				<context_description>local boolean Test2 = true</context_description>
+			</context_details>
+			<context_details>
+				<context_number>16</context_number>
+				<context_description>local date Today</context_description>
+			</context_details>
+			<context_details>
+				<context_number>17</context_number>
+				<context_description>local date Today2 = currentdate</context_description>
+			</context_details>
+			<context_details>
+				<context_number>18</context_number>
+				<context_description>local array List</context_description>
+			</context_details>
+			<context_details>
+				<context_number>19</context_number>
+				<context_description>local array List2 = clients</context_description>
+			</context_details>
+			<context_details>
+				<context_number>20</context_number>
+				<context_description>local string Things</context_description>
+			</context_details>
+			<context_details>
+				<context_number>21</context_number>
+				<context_description>local string Things2 = &apos;This is a string&apos;</context_description>
+			</context_details>
+		</contexts>
+		<initial_actions></initial_actions>
+		<conditions></conditions>
+		<actions>
+			<action_details>
+				<action_number>1</action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>for all clients set eligible = true</action_description>
+			</action_details>
+			<action_details>
+				<action_number>2</action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>for each case in job.cases set eligible=true</action_description>
+			</action_details>
+			<action_details>
+				<action_number>3</action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>for each case in job.cases where city==&apos;spokane&apos; set eligible=true</action_description>
+			</action_details>
+			<action_details>
+				<action_number>4</action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>for all clients where age &lt; 18 set eligible=false</action_description>
+			</action_details>
+			<action_details>
+				<action_number>5</action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>for each case and its address in job.cases set applying = true</action_description>
+			</action_details>
+			<action_details>
+				<action_number>6</action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>for each case and its address in job.cases where validatedCitizenship == false set eligible = false</action_description>
+			</action_details>
+		</actions>
+	</decision_table>
+	<decision_table>
+		<table_name>Syntax_Examples_2</table_name>
+		<xls_file>SyntaxExampleDTs.xls</xls_file>
+		<attribute_fields>
+			<type>FIRST</type>
+			<comments></comments>
+			<policy_reference></policy_reference>
+		</attribute_fields>
+		<contexts>
+			<context_details>
+				<context_number>1</context_number>
+				<context_description>for first of job.cases where validatedCitizenship == true</context_description>
+			</context_details>
+			<context_details>
+				<context_number>2</context_number>
+				<context_description>for first of job.cases and its case where city == &apos;New York&apos;</context_description>
+			</context_details>
+			<context_details>
+				<context_number>3</context_number>
+				<context_description>for first in job.cases where validatedCitizenship == false</context_description>
+			</context_details>
+			<context_details>
+				<context_number></context_number>
+				<context_description>local entity theClient</context_description>
+			</context_details>
+		</contexts>
+		<initial_actions>
+			<initial_action_details>
+				<intial_action_number>1</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>for first of job.cases where age &lt; 18 then set eligible = true;  else if none are found set eligible = false</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>2</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>for first of job.cases and its case where city == &apos;New York&apos; then set eligible = false; else if none are found set eligible = true</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>3</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>{ for all clients where age &gt; 18 set eligible = true }</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>4</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set totalgroupincome = 30400</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>5</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set totalincome = 1500.55</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>6</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set pregnant = false</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>7</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set address = mailingAddress</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>8</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set state = &apos;Wyoming&apos;</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>9</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set currentdate = effectivedate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>10</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set totalgroupincome = 29400</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>11</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set totalincome = 20302.95</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>12</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set pregnant = true</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>13</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set address = billingAddress</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>14</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set gender = &apos;male&apos;</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>15</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set street = 12345</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>16</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set birthday = dateofBirth</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>17</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set zip = $unknown</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>18</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set pregnant = $unknown</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>19</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectivedate = currentdate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>20</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set interestingCases = cases</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>21</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>perform syntax_examples</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>22</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>perform $something</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>23</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>add cases to clients</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>24</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>add client to interestingCases</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>25</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>add case_ID to interestingCases</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>26</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>add clients to cases</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>27</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>add effectiveDate to interestingDates</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>28</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>Add 42 to totalincome</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>29</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>Subtract 42 from totalincome</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>30</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>add 42 to totalincome</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>31</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>add mailingaddress if not member to locations</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>32</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>add client_ID if not member to cases</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>33</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>add client to context of this table</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>34</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>add client to context for this table</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>35</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>remove each client from clients where age &lt; 18</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>36</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>remove $steve from clients array</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>37</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>remove $steve from clients array</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>38</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>remove importantDates from InterestingDates array</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>39</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>remove client from clients array</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>40</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>randomize clients</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>41</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>clear clients</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>42</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>sort clients in ascending order by $steve</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>43</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>sort clients in descending order by $steve</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number>44</intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>Set InterestingClients = job&apos;s clients</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set cases = get copy of interestingCases</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set interestingClients = copy of clients</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set cases = get deep copy of interestingCases</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set interestingClients = deep copy of clients</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set errorCodes = [ 1 , 2, 3, 4 ]</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set errorcodes = tokenize errorType by location</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set errorCodes = [ errorType, location, message ]</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set errorCodes = [1.5, 2.75, 3.99]</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set theClient = clients [ 0 ]</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set InterestingClients = job&apos;s clients</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set client = new $theClient entity</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set client  = new client entity</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set client = clone of newClient</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set client = client&apos;s address</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set client = first client in clients where age &lt; 18</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set client = first client where pregnant == true</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set client = gender of client</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>subtract 2 years from effectiveDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>subtract 10 months from effectiveDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>subtract 25 days from effectiveDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>add 3 years to effectiveDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>add 8 months to effectiveDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>add 18 days to effectiveDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = (Date) birthday</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = date (birthday)</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = (date) clients [2]</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = using client (currentDate)</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = (20 days)</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = currentDate + effectiveDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = currentDate - effectiveDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = subtract 1 year from currentDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = subtract 9 months from currentDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = subtract 22 days from currentDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = add 2 years to currentDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = add 8 months to currentDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = add 14 days to currentDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set currentDate = first of year of effectiveDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set currentDate = first of month of effectiveDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set currentDate = end of month of effectiveDate</initial_action_description>
+			</initial_action_details>
+			<initial_action_details>
+				<intial_action_number></intial_action_number>
+				<initial_action_comment></initial_action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<initial_action_description>set effectiveDate = earliest of cases after currentDate</initial_action_description>
+			</initial_action_details>
+		</initial_actions>
+		<conditions></conditions>
+		<actions></actions>
+	</decision_table>
+	<decision_table>
+		<table_name>Syntax_Examples</table_name>
+		<xls_file>SyntaxExampleDTs.xls</xls_file>
+		<attribute_fields>
+			<type>FIRST</type>
+			<comments></comments>
+			<policy_reference></policy_reference>
+		</attribute_fields>
+		<contexts></contexts>
+		<initial_actions></initial_actions>
+		<conditions></conditions>
+		<actions>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set street = attribute street of client</action_description>
+			</action_details>
+			<action_details>
+				<action_number>1</action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set street = mapping key</action_description>
+			</action_details>
+			<action_details>
+				<action_number>2</action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set street = attribute street of client</action_description>
+			</action_details>
+			<action_details>
+				<action_number>3</action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set programLevel = substring of program from 0 to 10</action_description>
+			</action_details>
+			<action_details>
+				<action_number>4</action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set street = table information</action_description>
+			</action_details>
+			<action_details>
+				<action_number>5</action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set street = string</action_description>
+			</action_details>
+			<action_details>
+				<action_number>6</action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set parent = street + zip</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set programLevel = (program)</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set wages = wages  + 55</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set tips = tips + 35.50</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set street = street + $Oak</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set parent = street + zip</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set street = street + billingAddress</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set importantDates = importantDates + currentDate</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set street = street + clients</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set street = using client (street)</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = 550.87</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = (double) wages</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = (double) totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = totalIncome + totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = totalGroupIncome + totalIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = totalIncome - totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = totalIncome - additionalIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = totalIncome * totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = totalIncome * additionalIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = totalIncome / totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = totalIncome / additionalIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = - additionalIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = (additionalIncome)</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = (double) clients [0]</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = add to totalIncome 75</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = subtract from totalIncome 99</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = absolute value of totalIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalIncome = using clients (totalIncome)</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set FPL_Base = FPL_Base + FPL_PerAdditionalPerson</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set FPL_Base = FPL_Base - FPL_PerAdditionalPerson</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set FPL_Base = FPL_Base * FPL_PerAdditionalPerson</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set FPL_Base = FPL_Base / FPL_PerAdditionalPerson</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set expectedChildren = 2</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set FPL_Base = - FPL_Base</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set FPL_Base = (client_fpl)</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set FPL_Base = (client_fpl)</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set DateNumber = get days in months for effectiveDate</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set DateNumber = get days of months for effectiveDate</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set DateNumber = get days in months for effectiveDate</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalGroupIncome = (long) clients [1]</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalGroupIncome = (long) wages</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalGroupIncome = (long) 450</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalGroupIncome = number of clients</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalGroupIncome = number of clients where age &gt; 18</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set DateNumber = get days in months for effectiveDate</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set IncomeGroupCount = length of clients</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set IncomeGroupCount = length of parent</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set DateNumber = index of birthday in importantDates</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set FPL_Base = using clients 3</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalGroupIncome = add to totalGroupIncome 75</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalGroupIncome = subtract from totalGroupIncome 50</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalGroupIncome = absolute value of totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set totalGroupIncome = using client (IncomeGroupCount)</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set DateNumber = days from currentDate to effectiveDate</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set DateNumber = months from currentDate to effectiveDate</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set DateNumber = years from currentDate to effectiveDate</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = clients does not include  case</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = clients does include case</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = clients includes case</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set applying = there is match for all clients to $applying in cases</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = there is client where FPL_base &lt;867</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = is there mailingAddress in the Address where mailingAddress == billingAddress</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = there is no client where applying == false</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = there is no client in the case where applying == false</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = there is no case in the clients where client_FPL &gt; 1000</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = all clients have disabled == true</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = one of clients has a FPL_Base &gt; 867</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = client does not have SocialSecurity</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = client has a Wages</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = case has a FreeCoverage where FPL_Base &lt; 867</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = client is programLevel of case</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = additionalIncome is within 20 percent of totalIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = totalIncome is plus or minus 300 of additionalIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = IncomeGroupCount is equal to totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = totalIncome equal to totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = IncomeGroupCount is not equal to totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = totalIncome not equal to totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = IncomeGroupCount is greater than totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = totalIncome greater than totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = IncomeGroupCount is greater than or equal to totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = totalIncome greater than or equal to totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = IncomeGroupCount is less  than totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = totalIncome less than totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = IncomeGroupCount is less  than or equal to totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = totalIncome less than or equal to totalGroupIncome</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = $aName is equal to $anotherName</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = $aName equal to program</action_description>
+			</action_details>
+			<action_details>
+				<action_number></action_number>
+				<action_comment></action_comment>
+				<initial_action_requirement></initial_action_requirement>
+				<action_description>set eligible = $aName \= $anotherName</action_description>
+			</action_details>
+		</actions>
+	</decision_table>
+	<decision_table>
+		<table_name>Error_Handling_Table</table_name>
+		<xls_file>SyntaxExampleDTs.xls</xls_file>
+		<attribute_fields>
+			<type>FIRST</type>
+			<comments></comments>
+			<policy_reference></policy_reference>
+		</attribute_fields>
+		<contexts></contexts>
+		<initial_actions></initial_actions>
+		<conditions></conditions>
+		<actions></actions>
+	</decision_table>
+</decision_tables>
