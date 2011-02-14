@@ -21,91 +21,115 @@ dup clients forall pop
 if } clients forall pop 
 </context_postfix></context_details>
 <context_details>
-<context_number>8</context_number>
+<context_number>3</context_number>
 <context_description>local entity FirstClient</context_description>
 <context_postfix>
 null allocate execute 
 </context_postfix></context_details>
 <context_details>
-<context_number>9</context_number>
+<context_number>4</context_number>
 <context_description>local entity FirstClient2 = the client</context_description>
 <context_postfix>
 client cve allocate execute deallocate pop 
 </context_postfix></context_details>
 <context_details>
-<context_number>10</context_number>
+<context_number>5</context_number>
 <context_description>local long Anumber</context_description>
 <context_postfix>
 null allocate execute 
 </context_postfix></context_details>
 <context_details>
-<context_number>11</context_number>
+<context_number>6</context_number>
 <context_description>local long Anumber2 = 1234</context_description>
 <context_postfix>
 1234  cvi allocate execute deallocate pop 
 </context_postfix></context_details>
 <context_details>
-<context_number>12</context_number>
+<context_number>7</context_number>
 <context_description>local double DoubleNumber</context_description>
 <context_postfix>
 null allocate execute 
 </context_postfix></context_details>
 <context_details>
-<context_number>13</context_number>
+<context_number>8</context_number>
 <context_description>local double DoubleNumber2 = 1.234</context_description>
 <context_postfix>
 1.234  cvr allocate execute deallocate pop 
 </context_postfix></context_details>
 <context_details>
-<context_number>14</context_number>
+<context_number>9</context_number>
 <context_description>local boolean Test</context_description>
 <context_postfix>
 null allocate execute 
 </context_postfix></context_details>
 <context_details>
-<context_number>15</context_number>
+<context_number>10</context_number>
 <context_description>local boolean Test2 = true</context_description>
 <context_postfix>
 true cvb allocate execute deallocate pop 
 </context_postfix></context_details>
 <context_details>
-<context_number>16</context_number>
+<context_number>11</context_number>
 <context_description>local date Today</context_description>
 <context_postfix>
 null allocate execute 
 </context_postfix></context_details>
 <context_details>
-<context_number>17</context_number>
+<context_number>12</context_number>
 <context_description>local date Today2 = currentdate</context_description>
 <context_postfix>
 currentdate cvd allocate execute deallocate pop 
 </context_postfix></context_details>
 <context_details>
-<context_number>18</context_number>
+<context_number>13</context_number>
 <context_description>local array List</context_description>
 <context_postfix>
 null allocate execute 
 </context_postfix></context_details>
 <context_details>
-<context_number>19</context_number>
+<context_number>14</context_number>
 <context_description>local array List2 = clients</context_description>
 <context_postfix>
 clients allocate execute deallocate pop 
 </context_postfix></context_details>
 <context_details>
-<context_number>20</context_number>
+<context_number>15</context_number>
 <context_description>local string Things</context_description>
 <context_postfix>
 null allocate execute 
 </context_postfix></context_details>
 <context_details>
-<context_number>21</context_number>
+<context_number>16</context_number>
 <context_description>local string Things2 = &apos;This is a string&apos;</context_description>
 <context_postfix>
 &apos;This is a string&apos; cvs allocate execute deallocate pop 
 </context_postfix></context_details></contexts>
 <initial_actions></initial_actions>
-<conditions></conditions>
+<conditions>
+<condition_details>
+<condition_number>1</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>Perform when called</condition_description>
+<condition_postfix>
+Perform when called 
+</condition_postfix>
+<condition_column column_value="*" column_number="1"></condition_column>
+<condition_column column_value="-" column_number="2"></condition_column>
+<condition_column column_value="-" column_number="3"></condition_column>
+<condition_column column_value="-" column_number="4"></condition_column>
+<condition_column column_value="-" column_number="5"></condition_column>
+<condition_column column_value="-" column_number="6"></condition_column>
+<condition_column column_value="-" column_number="7"></condition_column>
+<condition_column column_value="-" column_number="8"></condition_column>
+<condition_column column_value="-" column_number="9"></condition_column>
+<condition_column column_value="-" column_number="10"></condition_column>
+<condition_column column_value="-" column_number="11"></condition_column>
+<condition_column column_value="-" column_number="12"></condition_column>
+<condition_column column_value="-" column_number="13"></condition_column>
+<condition_column column_value="-" column_number="14"></condition_column>
+<condition_column column_value="-" column_number="15"></condition_column>
+<condition_column column_value="-" column_number="16"></condition_column></condition_details></conditions>
 <actions>
 <action_details>
 <action_number>1</action_number>
@@ -114,7 +138,8 @@ null allocate execute
 <action_description>for all clients set eligible = true</action_description>
 <action_postfix>
 { true cvb /eligible xdef  } clients forallr 
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>2</action_number>
 <action_comment></action_comment>
@@ -122,7 +147,8 @@ null allocate execute
 <action_description>for each case in job.cases set eligible=true</action_description>
 <action_postfix>
 { true cvb /eligible xdef  } job.cases  forallr 
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>3</action_number>
 <action_comment></action_comment>
@@ -130,7 +156,8 @@ null allocate execute
 <action_description>for each case in job.cases where city==&apos;spokane&apos; set eligible=true</action_description>
 <action_postfix>
 { { true cvb /eligible xdef   } city &apos;spokane&apos; streq if } job.cases forallr 
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>4</action_number>
 <action_comment></action_comment>
@@ -138,7 +165,8 @@ null allocate execute
 <action_description>for all clients where age &lt; 18 set eligible=false</action_description>
 <action_postfix>
 { { false cvb /eligible xdef   } age 18 &lt; if } clients forallr 
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>5</action_number>
 <action_comment></action_comment>
@@ -146,7 +174,8 @@ null allocate execute
 <action_description>for each case and its address in job.cases set applying = true</action_description>
 <action_postfix>
 { address entitypush true cvb /applying xdef   entitypop } job.cases  forallr 
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>6</action_number>
 <action_comment></action_comment>
@@ -154,7 +183,8 @@ null allocate execute
 <action_description>for each case and its address in job.cases where validatedCitizenship == false set eligible = false</action_description>
 <action_postfix>
 { address entitypush { false cvb /eligible xdef   } validatedCitizenship false beq if entitypop } job.cases forallr 
-</action_postfix></action_details></actions></decision_table>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details></actions></decision_table>
 <decision_table>
 <table_name>Syntax_Examples_2</table_name>
 <xls_file>SyntaxExampleDTs.xls</xls_file>
@@ -872,7 +902,31 @@ currentDate dup &gt;r { { pop pop i i } over i d&gt; if pop } cases dup false so
 <policy_reference></policy_reference></attribute_fields>
 <contexts></contexts>
 <initial_actions></initial_actions>
-<conditions></conditions>
+<conditions>
+<condition_details>
+<condition_number>1</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>perform when called</condition_description>
+<condition_postfix>
+perform when called 
+</condition_postfix>
+<condition_column column_value="*" column_number="1"></condition_column>
+<condition_column column_value="-" column_number="2"></condition_column>
+<condition_column column_value="-" column_number="3"></condition_column>
+<condition_column column_value="-" column_number="4"></condition_column>
+<condition_column column_value="-" column_number="5"></condition_column>
+<condition_column column_value="-" column_number="6"></condition_column>
+<condition_column column_value="-" column_number="7"></condition_column>
+<condition_column column_value="-" column_number="8"></condition_column>
+<condition_column column_value="-" column_number="9"></condition_column>
+<condition_column column_value="-" column_number="10"></condition_column>
+<condition_column column_value="-" column_number="11"></condition_column>
+<condition_column column_value="-" column_number="12"></condition_column>
+<condition_column column_value="-" column_number="13"></condition_column>
+<condition_column column_value="-" column_number="14"></condition_column>
+<condition_column column_value="-" column_number="15"></condition_column>
+<condition_column column_value="-" column_number="16"></condition_column></condition_details></conditions>
 <actions>
 <action_details>
 <action_number>1</action_number>
@@ -881,7 +935,8 @@ currentDate dup &gt;r { { pop pop i i } over i d&gt; if pop } cases dup false so
 <action_description>set street = attribute street of client</action_description>
 <action_postfix>
 client street getXmlAttribute cvs /street xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>2</action_number>
 <action_comment></action_comment>
@@ -889,7 +944,8 @@ client street getXmlAttribute cvs /street xdef
 <action_description>set street = mapping key</action_description>
 <action_postfix>
 &quot;mapping*key&quot; cvn execute cvs /street xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>3</action_number>
 <action_comment></action_comment>
@@ -897,7 +953,8 @@ client street getXmlAttribute cvs /street xdef
 <action_description>set street = attribute street of client</action_description>
 <action_postfix>
 client street getXmlAttribute cvs /street xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>4</action_number>
 <action_comment></action_comment>
@@ -905,7 +962,8 @@ client street getXmlAttribute cvs /street xdef
 <action_description>set programLevel = substring of program from 0 to 10</action_description>
 <action_postfix>
 10 0 program substring cvs /programLevel xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>5</action_number>
 <action_comment></action_comment>
@@ -913,7 +971,8 @@ client street getXmlAttribute cvs /street xdef
 <action_description>set street = table information</action_description>
 <action_postfix>
 actionstring cvs /street xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>6</action_number>
 <action_comment></action_comment>
@@ -921,7 +980,8 @@ actionstring cvs /street xdef
 <action_description>set street = string</action_description>
 <action_postfix>
 string cvs /street xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>7</action_number>
 <action_comment></action_comment>
@@ -929,7 +989,8 @@ string cvs /street xdef
 <action_description>set parent = street + zip</action_description>
 <action_postfix>
 street zip strconcat cvs /parent xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>8</action_number>
 <action_comment></action_comment>
@@ -937,7 +998,8 @@ street zip strconcat cvs /parent xdef
 <action_description>set programLevel = (program)</action_description>
 <action_postfix>
 program cvs /programLevel xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>9</action_number>
 <action_comment></action_comment>
@@ -945,7 +1007,8 @@ program cvs /programLevel xdef
 <action_description>set wages = wages  + 55</action_description>
 <action_postfix>
 wages 55 strconcat cvs /wages xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>10</action_number>
 <action_comment></action_comment>
@@ -953,7 +1016,8 @@ wages 55 strconcat cvs /wages xdef
 <action_description>set tips = tips + 35.50</action_description>
 <action_postfix>
 tips 35.50 strconcat cvs /tips xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>11</action_number>
 <action_comment></action_comment>
@@ -961,7 +1025,8 @@ tips 35.50 strconcat cvs /tips xdef
 <action_description>set street = street + $Oak</action_description>
 <action_postfix>
 street /Oak strconcat cvs /street xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>12</action_number>
 <action_comment></action_comment>
@@ -969,7 +1034,8 @@ street /Oak strconcat cvs /street xdef
 <action_description>set parent = street + zip</action_description>
 <action_postfix>
 street zip strconcat cvs /parent xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>13</action_number>
 <action_comment></action_comment>
@@ -977,7 +1043,8 @@ street zip strconcat cvs /parent xdef
 <action_description>set street = street + billingAddress</action_description>
 <action_postfix>
 street billingAddress strconcat cvs /street xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>14</action_number>
 <action_comment></action_comment>
@@ -985,7 +1052,8 @@ street billingAddress strconcat cvs /street xdef
 <action_description>set importantDates = importantDates + currentDate</action_description>
 <action_postfix>
 importantDates currentDate strconcat cvs /importantDates xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>15</action_number>
 <action_comment></action_comment>
@@ -993,7 +1061,8 @@ importantDates currentDate strconcat cvs /importantDates xdef
 <action_description>set street = street + clients</action_description>
 <action_postfix>
 street clients strconcat cvs /street xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>16</action_number>
 <action_comment></action_comment>
@@ -1001,7 +1070,8 @@ street clients strconcat cvs /street xdef
 <action_description>set street = using client (street)</action_description>
 <action_postfix>
 client entitypush street entitypop cvs /street xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>17</action_number>
 <action_comment></action_comment>
@@ -1009,7 +1079,8 @@ client entitypush street entitypop cvs /street xdef
 <action_description>set totalIncome = 550.87</action_description>
 <action_postfix>
 550.87  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>18</action_number>
 <action_comment></action_comment>
@@ -1017,7 +1088,8 @@ client entitypush street entitypop cvs /street xdef
 <action_description>set totalIncome = (double) wages</action_description>
 <action_postfix>
 wages cvr  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>19</action_number>
 <action_comment></action_comment>
@@ -1025,7 +1097,8 @@ wages cvr  cvr /totalIncome xdef
 <action_description>set totalIncome = (double) totalGroupIncome</action_description>
 <action_postfix>
 totalGroupIncome cvr  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>20</action_number>
 <action_comment></action_comment>
@@ -1033,7 +1106,8 @@ totalGroupIncome cvr  cvr /totalIncome xdef
 <action_description>set totalIncome = totalIncome + totalGroupIncome</action_description>
 <action_postfix>
 totalIncome totalGroupIncome fadd  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>21</action_number>
 <action_comment></action_comment>
@@ -1041,7 +1115,8 @@ totalIncome totalGroupIncome fadd  cvr /totalIncome xdef
 <action_description>set totalIncome = totalGroupIncome + totalIncome</action_description>
 <action_postfix>
 totalGroupIncome totalIncome fadd  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>22</action_number>
 <action_comment></action_comment>
@@ -1049,7 +1124,8 @@ totalGroupIncome totalIncome fadd  cvr /totalIncome xdef
 <action_description>set totalIncome = totalIncome - totalGroupIncome</action_description>
 <action_postfix>
 totalIncome totalGroupIncome fsub  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>23</action_number>
 <action_comment></action_comment>
@@ -1057,7 +1133,8 @@ totalIncome totalGroupIncome fsub  cvr /totalIncome xdef
 <action_description>set totalIncome = totalIncome - additionalIncome</action_description>
 <action_postfix>
 totalIncome additionalIncome fsub  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>24</action_number>
 <action_comment></action_comment>
@@ -1065,7 +1142,8 @@ totalIncome additionalIncome fsub  cvr /totalIncome xdef
 <action_description>set totalIncome = totalIncome * totalGroupIncome</action_description>
 <action_postfix>
 totalIncome totalGroupIncome fmul  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>25</action_number>
 <action_comment></action_comment>
@@ -1073,7 +1151,8 @@ totalIncome totalGroupIncome fmul  cvr /totalIncome xdef
 <action_description>set totalIncome = totalIncome * additionalIncome</action_description>
 <action_postfix>
 totalIncome additionalIncome fmul  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>26</action_number>
 <action_comment></action_comment>
@@ -1081,7 +1160,8 @@ totalIncome additionalIncome fmul  cvr /totalIncome xdef
 <action_description>set totalIncome = totalIncome / totalGroupIncome</action_description>
 <action_postfix>
 totalIncome totalGroupIncome fdiv  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>27</action_number>
 <action_comment></action_comment>
@@ -1089,7 +1169,8 @@ totalIncome totalGroupIncome fdiv  cvr /totalIncome xdef
 <action_description>set totalIncome = totalIncome / additionalIncome</action_description>
 <action_postfix>
 totalIncome additionalIncome fdiv  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>28</action_number>
 <action_comment></action_comment>
@@ -1097,7 +1178,8 @@ totalIncome additionalIncome fdiv  cvr /totalIncome xdef
 <action_description>set totalIncome = - additionalIncome</action_description>
 <action_postfix>
 additionalIncome fnegate  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>29</action_number>
 <action_comment></action_comment>
@@ -1105,7 +1187,8 @@ additionalIncome fnegate  cvr /totalIncome xdef
 <action_description>set totalIncome = (additionalIncome)</action_description>
 <action_postfix>
 additionalIncome  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>30</action_number>
 <action_comment></action_comment>
@@ -1113,7 +1196,8 @@ additionalIncome  cvr /totalIncome xdef
 <action_description>set totalIncome = (double) clients [0]</action_description>
 <action_postfix>
 clients 0 getat  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>31</action_number>
 <action_comment></action_comment>
@@ -1121,7 +1205,8 @@ clients 0 getat  cvr /totalIncome xdef
 <action_description>set totalIncome = add to totalIncome 75</action_description>
 <action_postfix>
 /75   totalIncome75   fadd def  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>32</action_number>
 <action_comment></action_comment>
@@ -1129,7 +1214,8 @@ clients 0 getat  cvr /totalIncome xdef
 <action_description>set totalIncome = subtract from totalIncome 99</action_description>
 <action_postfix>
 /99   totalIncome99   fsub def  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>33</action_number>
 <action_comment></action_comment>
@@ -1137,7 +1223,8 @@ clients 0 getat  cvr /totalIncome xdef
 <action_description>set totalIncome = absolute value of totalIncome</action_description>
 <action_postfix>
 totalIncome fabs  cvr /totalIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>34</action_number>
 <action_comment></action_comment>
@@ -1145,7 +1232,8 @@ totalIncome fabs  cvr /totalIncome xdef
 <action_description>set totalIncome = using clients (totalIncome)</action_description>
 <action_postfix>
 clients entitypush totalIncome  entitypop  cvr /totalIncome xdef  
-</action_postfix></action_details></actions></decision_table>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details></actions></decision_table>
 <decision_table>
 <table_name>Syntax_Examples_4</table_name>
 <xls_file>SyntaxExampleDTs.xls</xls_file>
@@ -1155,7 +1243,31 @@ clients entitypush totalIncome  entitypop  cvr /totalIncome xdef
 <policy_reference></policy_reference></attribute_fields>
 <contexts></contexts>
 <initial_actions></initial_actions>
-<conditions></conditions>
+<conditions>
+<condition_details>
+<condition_number>1</condition_number>
+<condition_comment></condition_comment>
+<condition_requirement></condition_requirement>
+<condition_description>perform when called</condition_description>
+<condition_postfix>
+perform when called 
+</condition_postfix>
+<condition_column column_value="*" column_number="1"></condition_column>
+<condition_column column_value="-" column_number="2"></condition_column>
+<condition_column column_value="-" column_number="3"></condition_column>
+<condition_column column_value="-" column_number="4"></condition_column>
+<condition_column column_value="-" column_number="5"></condition_column>
+<condition_column column_value="-" column_number="6"></condition_column>
+<condition_column column_value="-" column_number="7"></condition_column>
+<condition_column column_value="-" column_number="8"></condition_column>
+<condition_column column_value="-" column_number="9"></condition_column>
+<condition_column column_value="-" column_number="10"></condition_column>
+<condition_column column_value="-" column_number="11"></condition_column>
+<condition_column column_value="-" column_number="12"></condition_column>
+<condition_column column_value="-" column_number="13"></condition_column>
+<condition_column column_value="-" column_number="14"></condition_column>
+<condition_column column_value="-" column_number="15"></condition_column>
+<condition_column column_value="-" column_number="16"></condition_column></condition_details></conditions>
 <actions>
 <action_details>
 <action_number>1</action_number>
@@ -1164,7 +1276,8 @@ clients entitypush totalIncome  entitypop  cvr /totalIncome xdef
 <action_description>set FPL_Base = FPL_Base + FPL_PerAdditionalPerson</action_description>
 <action_postfix>
 FPL_Base FPL_PerAdditionalPerson +  cvi /FPL_Base xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>2</action_number>
 <action_comment></action_comment>
@@ -1172,7 +1285,8 @@ FPL_Base FPL_PerAdditionalPerson +  cvi /FPL_Base xdef
 <action_description>set FPL_Base = FPL_Base - FPL_PerAdditionalPerson</action_description>
 <action_postfix>
 FPL_Base FPL_PerAdditionalPerson -  cvi /FPL_Base xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>3</action_number>
 <action_comment></action_comment>
@@ -1180,7 +1294,8 @@ FPL_Base FPL_PerAdditionalPerson -  cvi /FPL_Base xdef
 <action_description>set FPL_Base = FPL_Base * FPL_PerAdditionalPerson</action_description>
 <action_postfix>
 FPL_Base FPL_PerAdditionalPerson *  cvi /FPL_Base xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>4</action_number>
 <action_comment></action_comment>
@@ -1188,7 +1303,8 @@ FPL_Base FPL_PerAdditionalPerson *  cvi /FPL_Base xdef
 <action_description>set FPL_Base = FPL_Base / FPL_PerAdditionalPerson</action_description>
 <action_postfix>
 FPL_Base FPL_PerAdditionalPerson div  cvi /FPL_Base xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>5</action_number>
 <action_comment></action_comment>
@@ -1196,7 +1312,8 @@ FPL_Base FPL_PerAdditionalPerson div  cvi /FPL_Base xdef
 <action_description>set expectedChildren = 2</action_description>
 <action_postfix>
 2  cvi /expectedChildren xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>6</action_number>
 <action_comment></action_comment>
@@ -1204,7 +1321,8 @@ FPL_Base FPL_PerAdditionalPerson div  cvi /FPL_Base xdef
 <action_description>set FPL_Base = - FPL_Base</action_description>
 <action_postfix>
 FPL_Base negate  cvi /FPL_Base xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>7</action_number>
 <action_comment></action_comment>
@@ -1212,7 +1330,8 @@ FPL_Base negate  cvi /FPL_Base xdef
 <action_description>set FPL_Base = (client_fpl)</action_description>
 <action_postfix>
 client_fpl   cvi /FPL_Base xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>8</action_number>
 <action_comment></action_comment>
@@ -1220,7 +1339,8 @@ client_fpl   cvi /FPL_Base xdef
 <action_description>set FPL_Base = (client_fpl)</action_description>
 <action_postfix>
 client_fpl   cvi /FPL_Base xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>9</action_number>
 <action_comment></action_comment>
@@ -1228,7 +1348,8 @@ client_fpl   cvi /FPL_Base xdef
 <action_description>set DateNumber = get days in months for effectiveDate</action_description>
 <action_postfix>
 effectiveDate getdaysinmonth  cvi /DateNumber xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>10</action_number>
 <action_comment></action_comment>
@@ -1236,7 +1357,8 @@ effectiveDate getdaysinmonth  cvi /DateNumber xdef
 <action_description>set DateNumber = get days of months for effectiveDate</action_description>
 <action_postfix>
 effectiveDate getdayofmonth  cvi /DateNumber xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>11</action_number>
 <action_comment></action_comment>
@@ -1244,7 +1366,8 @@ effectiveDate getdayofmonth  cvi /DateNumber xdef
 <action_description>set DateNumber = get days in months for effectiveDate</action_description>
 <action_postfix>
 effectiveDate getdaysinmonth  cvi /DateNumber xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>12</action_number>
 <action_comment></action_comment>
@@ -1252,7 +1375,8 @@ effectiveDate getdaysinmonth  cvi /DateNumber xdef
 <action_description>set totalGroupIncome = (long) clients [1]</action_description>
 <action_postfix>
 clients 1 getat cvi  cvi /totalGroupIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>13</action_number>
 <action_comment></action_comment>
@@ -1260,7 +1384,8 @@ clients 1 getat cvi  cvi /totalGroupIncome xdef
 <action_description>set totalGroupIncome = (long) wages</action_description>
 <action_postfix>
 wages cvi  cvi /totalGroupIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>14</action_number>
 <action_comment></action_comment>
@@ -1268,7 +1393,8 @@ wages cvi  cvi /totalGroupIncome xdef
 <action_description>set totalGroupIncome = (long) 450</action_description>
 <action_postfix>
 450  cvi  cvi /totalGroupIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>15</action_number>
 <action_comment></action_comment>
@@ -1276,7 +1402,8 @@ wages cvi  cvi /totalGroupIncome xdef
 <action_description>set totalGroupIncome = number of clients</action_description>
 <action_postfix>
 clients length  cvi /totalGroupIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>16</action_number>
 <action_comment></action_comment>
@@ -1284,7 +1411,8 @@ clients length  cvi /totalGroupIncome xdef
 <action_description>set totalGroupIncome = number of clients where age &gt; 18</action_description>
 <action_postfix>
 0 { { 1 ladd } age 18 &gt; if }clients forall  cvi /totalGroupIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>17</action_number>
 <action_comment></action_comment>
@@ -1292,7 +1420,8 @@ clients length  cvi /totalGroupIncome xdef
 <action_description>set DateNumber = get days in months for effectiveDate</action_description>
 <action_postfix>
 effectiveDate getdaysinmonth  cvi /DateNumber xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>18</action_number>
 <action_comment></action_comment>
@@ -1300,7 +1429,8 @@ effectiveDate getdaysinmonth  cvi /DateNumber xdef
 <action_description>set IncomeGroupCount = length of clients</action_description>
 <action_postfix>
 clients length  cvi /IncomeGroupCount xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>19</action_number>
 <action_comment></action_comment>
@@ -1308,7 +1438,8 @@ clients length  cvi /IncomeGroupCount xdef
 <action_description>set IncomeGroupCount = length of parent</action_description>
 <action_postfix>
 parent strlength  cvi /IncomeGroupCount xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>20</action_number>
 <action_comment></action_comment>
@@ -1316,7 +1447,8 @@ parent strlength  cvi /IncomeGroupCount xdef
 <action_description>set DateNumber = index of birthday in importantDates</action_description>
 <action_postfix>
 birthday importantDates indexof  cvi /DateNumber xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>21</action_number>
 <action_comment></action_comment>
@@ -1324,7 +1456,8 @@ birthday importantDates indexof  cvi /DateNumber xdef
 <action_description>set FPL_Base = using clients 3</action_description>
 <action_postfix>
 clients entitypush 3  entitypop  cvi /FPL_Base xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>22</action_number>
 <action_comment></action_comment>
@@ -1332,7 +1465,8 @@ clients entitypush 3  entitypop  cvi /FPL_Base xdef
 <action_description>set totalGroupIncome = add to totalGroupIncome 75</action_description>
 <action_postfix>
 /75  totalGroupIncome75   ladd def  cvi /totalGroupIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>23</action_number>
 <action_comment></action_comment>
@@ -1340,7 +1474,8 @@ clients entitypush 3  entitypop  cvi /FPL_Base xdef
 <action_description>set totalGroupIncome = subtract from totalGroupIncome 50</action_description>
 <action_postfix>
 /50  totalGroupIncome50   lsub def  cvi /totalGroupIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>24</action_number>
 <action_comment></action_comment>
@@ -1348,7 +1483,8 @@ clients entitypush 3  entitypop  cvi /FPL_Base xdef
 <action_description>set totalGroupIncome = absolute value of totalGroupIncome</action_description>
 <action_postfix>
 totalGroupIncome labs  cvi /totalGroupIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>25</action_number>
 <action_comment></action_comment>
@@ -1356,7 +1492,8 @@ totalGroupIncome labs  cvi /totalGroupIncome xdef
 <action_description>set totalGroupIncome = using client (IncomeGroupCount)</action_description>
 <action_postfix>
 client entitypush IncomeGroupCount entitypop  cvi /totalGroupIncome xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>26</action_number>
 <action_comment></action_comment>
@@ -1364,7 +1501,8 @@ client entitypush IncomeGroupCount entitypop  cvi /totalGroupIncome xdef
 <action_description>set DateNumber = days from currentDate to effectiveDate</action_description>
 <action_postfix>
 currentDate effectiveDate daysbetween  cvi /DateNumber xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>27</action_number>
 <action_comment></action_comment>
@@ -1372,7 +1510,8 @@ currentDate effectiveDate daysbetween  cvi /DateNumber xdef
 <action_description>set DateNumber = months from currentDate to effectiveDate</action_description>
 <action_postfix>
 currentDate effectiveDate monthsbetween  cvi /DateNumber xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>28</action_number>
 <action_comment></action_comment>
@@ -1380,7 +1519,8 @@ currentDate effectiveDate monthsbetween  cvi /DateNumber xdef
 <action_description>set DateNumber = years from currentDate to effectiveDate</action_description>
 <action_postfix>
 currentDate effectiveDate yearsbetween  cvi /DateNumber xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>29</action_number>
 <action_comment></action_comment>
@@ -1388,7 +1528,8 @@ currentDate effectiveDate yearsbetween  cvi /DateNumber xdef
 <action_description>set eligible = clients does not include  case</action_description>
 <action_postfix>
 clients case memberof not cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>30</action_number>
 <action_comment></action_comment>
@@ -1396,7 +1537,8 @@ clients case memberof not cvb /eligible xdef
 <action_description>set eligible = clients does include case</action_description>
 <action_postfix>
 clients case memberof cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>31</action_number>
 <action_comment></action_comment>
@@ -1404,7 +1546,8 @@ clients case memberof cvb /eligible xdef
 <action_description>set eligible = clients includes case</action_description>
 <action_postfix>
 clients case memberof cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>32</action_number>
 <action_comment></action_comment>
@@ -1412,7 +1555,8 @@ clients case memberof cvb /eligible xdef
 <action_description>set applying = there is match for all clients to $applying in cases</action_description>
 <action_postfix>
 true { over { { } { swap pop false swap } { dup /applying execute streq } cases forfirstelse } swap if pop } clients for cvb /applying xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>33</action_number>
 <action_comment></action_comment>
@@ -1420,7 +1564,8 @@ true { over { { } { swap pop false swap } { dup /applying execute streq } cases 
 <action_description>set eligible = there is client where FPL_base &lt;867</action_description>
 <action_postfix>
 { true } { false } { FPL_base 867 &lt; } clients forfirstelse cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>34</action_number>
 <action_comment></action_comment>
@@ -1428,7 +1573,8 @@ true { over { { } { swap pop false swap } { dup /applying execute streq } cases 
 <action_description>set eligible = is there mailingAddress in the Address where mailingAddress == billingAddress</action_description>
 <action_postfix>
 { true } { false } { mailingAddress billingAddress req  } mailingAddresss Address entitypush forfirstelse entitypop cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>35</action_number>
 <action_comment></action_comment>
@@ -1436,7 +1582,8 @@ true { over { { } { swap pop false swap } { dup /applying execute streq } cases 
 <action_description>set eligible = there is no client where applying == false</action_description>
 <action_postfix>
 { false } { true } { applying false beq } clients forfirstelse cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>36</action_number>
 <action_comment></action_comment>
@@ -1444,7 +1591,8 @@ true { over { { } { swap pop false swap } { dup /applying execute streq } cases 
 <action_description>set eligible = there is no client in the case where applying == false</action_description>
 <action_postfix>
 { false } { true } { applying false beq } clients case entitypush forfirstelse entitypop cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>37</action_number>
 <action_comment></action_comment>
@@ -1452,7 +1600,8 @@ true { over { { } { swap pop false swap } { dup /applying execute streq } cases 
 <action_description>set eligible = there is no case in the clients where client_FPL &gt; 1000</action_description>
 <action_postfix>
 { false } { true } { client_FPL 1000 &gt; } clients forfirstelse cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>38</action_number>
 <action_comment></action_comment>
@@ -1460,7 +1609,8 @@ true { over { { } { swap pop false swap } { dup /applying execute streq } cases 
 <action_description>set eligible = all clients have disabled == true</action_description>
 <action_postfix>
 { false } { true } { disabled true beq not } clients forfirstelse cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>39</action_number>
 <action_comment></action_comment>
@@ -1468,7 +1618,8 @@ true { over { { } { swap pop false swap } { dup /applying execute streq } cases 
 <action_description>set eligible = one of clients has a FPL_Base &gt; 867</action_description>
 <action_postfix>
 { true } { false } { FPL_Base 867 &gt; } clients forfirstelse cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>40</action_number>
 <action_comment></action_comment>
@@ -1476,7 +1627,8 @@ true { over { { } { swap pop false swap } { dup /applying execute streq } cases 
 <action_description>set eligible = client does not have SocialSecurity</action_description>
 <action_postfix>
 SocialSecurity client { pop pop false } { pop pop true } { over type streq over target req and } relationships forfirstelse cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>41</action_number>
 <action_comment></action_comment>
@@ -1484,7 +1636,8 @@ SocialSecurity client { pop pop false } { pop pop true } { over type streq over 
 <action_description>set eligible = client has a Wages</action_description>
 <action_postfix>
 Wages client { pop pop true } { pop pop false } { over type streq over target req and } relationships forfirstelse cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>42</action_number>
 <action_comment></action_comment>
@@ -1492,7 +1645,8 @@ Wages client { pop pop true } { pop pop false } { over type streq over target re
 <action_description>set eligible = case has a FreeCoverage where FPL_Base &lt; 867</action_description>
 <action_postfix>
 FreeCoverage case { pop pop true } { pop pop false } { over type streq over target req and source entitypush FPL_Base 867 &lt; entitypop and } relationships forfirstelse cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>43</action_number>
 <action_comment></action_comment>
@@ -1500,7 +1654,8 @@ FreeCoverage case { pop pop true } { pop pop false } { over type streq over targ
 <action_description>set eligible = client is programLevel of case</action_description>
 <action_postfix>
 programLevel { pop true } { pop false } { dup type streq source client  req and target case  req and }  relationships forfirstelse cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>44</action_number>
 <action_comment></action_comment>
@@ -1508,7 +1663,8 @@ programLevel { pop true } { pop false } { dup type streq source client  req and 
 <action_description>set eligible = additionalIncome is within 20 percent of totalIncome</action_description>
 <action_postfix>
 totalIncome additionalIncome 20  100.0 f/ over f* swap &gt;r &gt;r &gt;r i j f- k f&lt; r&gt; r&gt; f+ r&gt; f&gt; and cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>45</action_number>
 <action_comment></action_comment>
@@ -1516,7 +1672,8 @@ totalIncome additionalIncome 20  100.0 f/ over f* swap &gt;r &gt;r &gt;r i j f- 
 <action_description>set eligible = totalIncome is plus or minus 300 of additionalIncome</action_description>
 <action_postfix>
 additionalIncome 300  totalIncome &gt;r &gt;r &gt;r i j f- k f&lt; r&gt; r&gt; f+ r&gt; f&gt; and cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>46</action_number>
 <action_comment></action_comment>
@@ -1524,7 +1681,8 @@ additionalIncome 300  totalIncome &gt;r &gt;r &gt;r i j f- k f&lt; r&gt; r&gt; f
 <action_description>set eligible = IncomeGroupCount is equal to totalGroupIncome</action_description>
 <action_postfix>
 IncomeGroupCount totalGroupIncome == cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>47</action_number>
 <action_comment></action_comment>
@@ -1532,7 +1690,8 @@ IncomeGroupCount totalGroupIncome == cvb /eligible xdef
 <action_description>set eligible = totalIncome equal to totalGroupIncome</action_description>
 <action_postfix>
 totalIncome totalGroupIncome f== cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>48</action_number>
 <action_comment></action_comment>
@@ -1540,7 +1699,8 @@ totalIncome totalGroupIncome f== cvb /eligible xdef
 <action_description>set eligible = IncomeGroupCount is not equal to totalGroupIncome</action_description>
 <action_postfix>
 IncomeGroupCount totalGroupIncome == not cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>49</action_number>
 <action_comment></action_comment>
@@ -1548,7 +1708,8 @@ IncomeGroupCount totalGroupIncome == not cvb /eligible xdef
 <action_description>set eligible = totalIncome not equal to totalGroupIncome</action_description>
 <action_postfix>
 totalIncome totalGroupIncome f== not cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>50</action_number>
 <action_comment></action_comment>
@@ -1556,7 +1717,8 @@ totalIncome totalGroupIncome f== not cvb /eligible xdef
 <action_description>set eligible = IncomeGroupCount is greater than totalGroupIncome</action_description>
 <action_postfix>
 IncomeGroupCount totalGroupIncome &gt; cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>51</action_number>
 <action_comment></action_comment>
@@ -1564,7 +1726,8 @@ IncomeGroupCount totalGroupIncome &gt; cvb /eligible xdef
 <action_description>set eligible = totalIncome greater than totalGroupIncome</action_description>
 <action_postfix>
 totalIncome totalGroupIncome f&gt; cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>52</action_number>
 <action_comment></action_comment>
@@ -1572,7 +1735,8 @@ totalIncome totalGroupIncome f&gt; cvb /eligible xdef
 <action_description>set eligible = IncomeGroupCount is greater than or equal to totalGroupIncome</action_description>
 <action_postfix>
 IncomeGroupCount totalGroupIncome &gt;= cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>53</action_number>
 <action_comment></action_comment>
@@ -1580,7 +1744,8 @@ IncomeGroupCount totalGroupIncome &gt;= cvb /eligible xdef
 <action_description>set eligible = totalIncome greater than or equal to totalGroupIncome</action_description>
 <action_postfix>
 totalIncome totalGroupIncome f&gt;= cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>54</action_number>
 <action_comment></action_comment>
@@ -1588,7 +1753,8 @@ totalIncome totalGroupIncome f&gt;= cvb /eligible xdef
 <action_description>set eligible = IncomeGroupCount is less  than totalGroupIncome</action_description>
 <action_postfix>
 IncomeGroupCount totalGroupIncome &lt; cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>55</action_number>
 <action_comment></action_comment>
@@ -1596,7 +1762,8 @@ IncomeGroupCount totalGroupIncome &lt; cvb /eligible xdef
 <action_description>set eligible = totalIncome less than totalGroupIncome</action_description>
 <action_postfix>
 totalIncome totalGroupIncome f&lt; cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>56</action_number>
 <action_comment></action_comment>
@@ -1604,7 +1771,8 @@ totalIncome totalGroupIncome f&lt; cvb /eligible xdef
 <action_description>set eligible = IncomeGroupCount is less  than or equal to totalGroupIncome</action_description>
 <action_postfix>
 IncomeGroupCount totalGroupIncome &lt;= cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>57</action_number>
 <action_comment></action_comment>
@@ -1612,7 +1780,8 @@ IncomeGroupCount totalGroupIncome &lt;= cvb /eligible xdef
 <action_description>set eligible = totalIncome less than or equal to totalGroupIncome</action_description>
 <action_postfix>
 totalIncome totalGroupIncome f&lt;= cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>58</action_number>
 <action_comment></action_comment>
@@ -1620,7 +1789,8 @@ totalIncome totalGroupIncome f&lt;= cvb /eligible xdef
 <action_description>set eligible = $aName is equal to $anotherName</action_description>
 <action_postfix>
 /aName /anotherName nameeq cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>59</action_number>
 <action_comment></action_comment>
@@ -1628,7 +1798,8 @@ totalIncome totalGroupIncome f&lt;= cvb /eligible xdef
 <action_description>set eligible = $aName equal to program</action_description>
 <action_postfix>
 /aName program streq cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>60</action_number>
 <action_comment></action_comment>
@@ -1636,7 +1807,8 @@ totalIncome totalGroupIncome f&lt;= cvb /eligible xdef
 <action_description>set eligible = $aName != $anotherName</action_description>
 <action_postfix>
 /aName /anotherName nameeq not cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>61</action_number>
 <action_comment></action_comment>
@@ -1644,7 +1816,8 @@ totalIncome totalGroupIncome f&lt;= cvb /eligible xdef
 <action_description>set eligible = $aName != program</action_description>
 <action_postfix>
 /aName program streq not cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>62</action_number>
 <action_comment></action_comment>
@@ -1652,7 +1825,8 @@ totalIncome totalGroupIncome f&lt;= cvb /eligible xdef
 <action_description>set eligible = program == programLevel</action_description>
 <action_postfix>
 program programLevel streq cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>63</action_number>
 <action_comment></action_comment>
@@ -1660,7 +1834,8 @@ program programLevel streq cvb /eligible xdef
 <action_description>set eligible = program != programLevel</action_description>
 <action_postfix>
 program programLevel streq not cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
 <action_number>64</action_number>
 <action_comment></action_comment>
@@ -1668,31 +1843,35 @@ program programLevel streq not cvb /eligible xdef
 <action_description>set eligible = $aName != $anotherName</action_description>
 <action_postfix>
 /aName /anotherName nameeq not cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
-<action_number>66</action_number>
+<action_number>65</action_number>
 <action_comment></action_comment>
 <initial_action_requirement></initial_action_requirement>
 <action_description>set eligible = client_ID starts with programLevel</action_description>
 <action_postfix>
 client_ID programLevel 0 startswith cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
-<action_number>67</action_number>
+<action_number>66</action_number>
 <action_comment></action_comment>
 <initial_action_requirement></initial_action_requirement>
 <action_description>set eligible = client_ID is one of clients</action_description>
 <action_postfix>
 clients client_ID memberof cvb /eligible xdef  
-</action_postfix></action_details>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
-<action_number>68</action_number>
+<action_number>67</action_number>
 <action_comment></action_comment>
 <initial_action_requirement></initial_action_requirement>
 <action_description>set eligible = client_ID is not one of clients</action_description>
 <action_postfix>
 clients client_ID memberof not cvb /eligible xdef  
-</action_postfix></action_details></actions></decision_table>
+</action_postfix>
+<action_column column_value="X" column_number="1"></action_column></action_details></actions></decision_table>
 <decision_table>
 <table_name>Error_Handling_Table</table_name>
 <xls_file>SyntaxExampleDTs.xls</xls_file>
